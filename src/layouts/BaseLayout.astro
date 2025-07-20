@@ -1,0 +1,36 @@
+---
+import "../styles/global.css";
+const { pageTitle } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{pageTitle}</title>
+  </head>
+  <body>
+    <h1>{pageTitle}</h1>
+
+    <slot />
+
+    <script>
+      const favicons = ["🌧️", "🌱", "🌿", "🪴", "🌳", "🍂"];
+      let index = 0;
+      let favicon = document.querySelector(
+        'link[rel="icon"]'
+      ) as HTMLAnchorElement;
+
+      if (favicon) {
+        setInterval(() => {
+          const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y="1.1em" font-size="80">${favicons[index]}</text></svg>`;
+          favicon.href = `data:image/svg+xml,${encodeURIComponent(svg)}`;
+          index = (index + 1) % favicons.length;
+        }, 1500);
+      }
+    </script>
+  </body>
+</html>

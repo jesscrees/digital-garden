@@ -26,6 +26,7 @@ content:
     fields:
       - { name: layout, type: string, hidden: true, default: "../layouts/AboutLayout.astro" }
       - { name: title, label: Title, type: string }
+      - { name: pageTitle, label: Page Title, type: string }
   - name: about
     label: About page
     type: file
