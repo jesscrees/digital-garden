@@ -1,6 +1,14 @@
 ---
 import "../styles/global.css";
-const { pageTitle } = Astro.props;
+
+export interface Props {
+  frontmatter: {
+    pageTitle: string;
+    description?: string;
+  };
+}
+
+const { frontmatter } = Astro.props;
 ---
 
 <html lang="en">
@@ -10,10 +18,12 @@ const { pageTitle } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
-    <title>{pageTitle}</title>
+    <title>{frontmatter.pageTitle}</title>
   </head>
   <body>
-    <h1>{pageTitle}</h1>
+    <h1>{frontmatter.pageTitle}</h1>
+
+    <p>{frontmatter.description}</p>
 
     <slot />
 
