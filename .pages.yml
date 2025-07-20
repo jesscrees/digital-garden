@@ -24,7 +24,7 @@ content:
     type: file
     path: src/pages/index.astro
     fields:
-      - { name: layout, type: string, hidden: true, default: "../layouts/AboutLayout.astro" }
+      - { name: layout, type: string, hidden: true, default: "../layouts/BaseLayout.astro" }
       - { name: title, label: Title, type: string }
       - { name: pageTitle, label: Page Title, type: string }
       - { name: description, label: Description, type: string }
