@@ -38,6 +38,26 @@
   --caption-letter-spacing: 0.5%;
 }
 
+/* Base styles */
+body {
+  font-size: 16px;
+  transition: 0.2s all linear;
+}
+
+/* Larger screens */
+@media (min-width: 992px) {
+  body {
+    font-size: 18px;
+  }
+} 
+
+/* Smaller tablets and mobiles */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}
+
 .h1 {
   font-size: var(--h1-size);
   line-height: var(--h1-line-height);
