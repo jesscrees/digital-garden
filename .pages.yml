@@ -22,7 +22,7 @@ content:
   - name: home
     label: Home page
     type: file
-    path: src/pages/index.astro
+    path: src/pages/index.md
     fields:
       - { name: layout, type: string, hidden: true, default: "../layouts/BaseLayout.astro" }
       - { name: title, label: Title, type: string }
