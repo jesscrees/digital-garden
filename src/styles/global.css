@@ -36,12 +36,28 @@
   --caption-size: 1rem;
   --caption-line-height: 160%;
   --caption-letter-spacing: 0.5%;
+
+  /* Colors */
+  --primary-light: #EFE6EC;
+  --primary-dark: #161925;
+  --secondary-light: #66999B;
+  --secondary-dark: #934D77;
+  --accent: #FF5400;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 /* Base styles */
 body {
   font-size: 16px;
   transition: 0.2s all linear;
+
+  background-color: var(--primary-light);
+  color: var(--primary-dark);
 }
 
 /* Larger screens */
@@ -58,37 +74,37 @@ body {
   }
 }
 
-.h1 {
+h1 {
   font-size: var(--h1-size);
   line-height: var(--h1-line-height);
   letter-spacing: var(--h1-letter-spacing);
 }
 
-.h2 {
+h2 {
   font-size: var(--h2-size);
   line-height: var(--h2-line-height);
   letter-spacing: var(--h2-letter-spacing);
 }
 
-.h3 {
+h3 {
   font-size: var(--h3-size);
   line-height: var(--h3-line-height);
   letter-spacing: var(--h3-letter-spacing);
 }
 
-.h4 {
+h4 {
   font-size: var(--h4-size);
   line-height: var(--h4-line-height);
   letter-spacing: var(--h4-letter-spacing);
 }
 
-.h5 {
+h5 {
   font-size: var(--h5-size);
   line-height: var(--h5-line-height);
   letter-spacing: var(--h5-letter-spacing);
 }
 
-.h6 {
+h6 {
   font-size: var(--h6-size);
   line-height: var(--h6-line-height);
   letter-spacing: var(--h6-letter-spacing);
@@ -116,4 +132,59 @@ body {
   font-size: var(--caption-size);
   line-height: var(--caption-line-height);
   letter-spacing: var(--caption-letter-spacing);
+}
+
+header {
+  font-weight: 900;
+  padding: 10px 0rem 40px;
+}
+
+footer {
+  padding: 10px 0rem 40px;
+  width: 100%;
+}
+
+footer section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+footer section .input-with-label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+footer section .input-with-label label {
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+footer section .input-with-label input {
+  font-size: 1rem;
+  padding: 8px 12px;
+}
+
+footer section .input-with-label textarea {
+  font-family: var(--font-family); 
+  font-size: 1rem;
+  padding: 8px 12px;
+  resize: vertical;
+}
+
+footer section .input-with-label:first-of-type {
+  width: 50%;
+}
+
+footer section button {
+  background: none;
+  border-radius: 20px;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  cursor: pointer;
+  font-weight: 900;
+  margin: 0 auto;
+  padding: 10px 20px;
+  width: auto;
 }

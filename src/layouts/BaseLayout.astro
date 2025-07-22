@@ -4,9 +4,6 @@ import "../styles/global.css";
 export interface Props {
   frontmatter: {
     pageTitle: string;
-    heading: string;
-    subHeading: string;
-    blogHeading: string;
   };
 }
 
@@ -23,11 +20,37 @@ const { frontmatter } = Astro.props;
     <title>{frontmatter.pageTitle}</title>
   </head>
   <body>
-    <h1>{frontmatter.heading}</h1>
+    <header class="body-lg">🌱 Jess Crees</header>
 
-    <p>{frontmatter.subHeading}</p>
+    <slot />
 
-    <h3>{frontmatter.blogHeading}</h3>
+    <footer>
+      <h4>Get in Touch</h4>
+
+      <section>
+        <div class="input-with-label">
+          <label for="email">Email Address</label>
+          <input
+            id="email"
+            name="email"
+            placeholder="jane@smith.com"
+            type="email"
+          />
+        </div>
+
+        <div class="input-with-label">
+          <label for="text">Your Message</label>
+          <textarea
+            cols="30"
+            id="text"
+            name="text"
+            placeholder="What's on your mind?"
+            rows="5"></textarea>
+        </div>
+
+        <button>Send Message</button>
+      </section>
+    </footer>
 
     <script>
       const favicons = ["🌧️", "🌱", "🌿", "🪴", "🌳", "🍂"];
