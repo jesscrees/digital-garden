@@ -7,7 +7,7 @@ content:
     type: collection
     path: src/content/blog
     view:
-      fields: [ title, description, draft, date ]
+      fields: [ ogImage, title, draft, date ]
     fields:
       - { name: title, label: Title, type: string, required: true }
       - { name: description, label: Description, type: string }
