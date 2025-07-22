@@ -1,11 +1,9 @@
 ---
-author: Jess
-pubDatetime: 2025-07-02
 title: First Blog Post
-slug: first-blog-post
-featured: false
-draft: false
 description: Description of post
+slug: first-blog-post
+draft: false
+ogImage: /Original Logo Symbol.png
 ---
 # Heading 1
 
