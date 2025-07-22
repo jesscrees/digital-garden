@@ -9,30 +9,19 @@ content:
     view:
       fields: [ title, draft, date ]
     fields:
-      - { name: author, label: Author, type: string }
-      - { name: pubDatetime, label: Date, type: date }
       - { name: title, label: Title, type: string, required: true }
-      - { name: ogImage, label: Title, type: string }
-      - { name: slug, label: Slug, type: string }
-      - { name: featured, label: Featured, type: boolean }
-      - { name: draft, label: Draft, type: boolean }
-      - { name: tags, label: Tags, type: string, list: true }
       - { name: description, label: Description, type: string }
-      - { name: body, label: Body, type: rich-text }
+      - { name: slug, label: Slug, type: string, required: true }
+      - { name: draft, label: Draft, type: boolean }
+      - { name: ogImage, label: Image, type: string, required: true }
+      - { name: body, label: Content, type: rich-text }
   - name: home
     label: Home page
     type: file
     path: src/pages/index.md
     fields:
       - { name: layout, type: string, hidden: true, default: "../layouts/BaseLayout.astro" }
-      - { name: title, label: Title, type: string }
-      - { name: pageTitle, label: Page Title, type: string }
-      - { name: description, label: Description, type: string }
-  - name: about
-    label: About page
-    type: file
-    path: src/pages/about.md
-    fields:
-      - { name: layout, type: string, hidden: true, default: "../layouts/AboutLayout.astro" }
-      - { name: title, label: Title, type: string }
-      - { name: body, label: Body, type: rich-text, options: { input: public/assets, output: /assets } }
+      - { name: pageTitle, label: Page Title, type: string, required: true }
+      - { name: heading, label: Heading, type: string, required: true }
+      - { name: subHeading, label: Sub-Heading, type: string }
+      - { name: blogHeading, label: Blog Heading, type: string, required: true }
