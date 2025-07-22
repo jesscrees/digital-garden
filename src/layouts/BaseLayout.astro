@@ -4,7 +4,9 @@ import "../styles/global.css";
 export interface Props {
   frontmatter: {
     pageTitle: string;
-    description?: string;
+    heading: string;
+    subHeading: string;
+    blogHeading: string;
   };
 }
 
@@ -21,11 +23,11 @@ const { frontmatter } = Astro.props;
     <title>{frontmatter.pageTitle}</title>
   </head>
   <body>
-    <h1>{frontmatter.pageTitle}</h1>
+    <h1>{frontmatter.heading}</h1>
 
-    <p>{frontmatter.description}</p>
+    <p>{frontmatter.subHeading}</p>
 
-    <slot />
+    <h3>{frontmatter.blogHeading}</h3>
 
     <script>
       const favicons = ["🌧️", "🌱", "🌿", "🪴", "🌳", "🍂"];
