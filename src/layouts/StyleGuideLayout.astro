@@ -1,0 +1,32 @@
+---
+import "../styles/global.scss";
+import BaseLayout from "./BaseLayout.astro";
+
+export interface Props {
+  frontmatter: {
+    pageTitle: string;
+  };
+}
+
+const { frontmatter } = Astro.props;
+---
+
+<BaseLayout frontmatter={frontmatter}>
+  <h1>H1</h1>
+
+  <h2>H2</h2>
+
+  <h3>H3</h3>
+
+  <h4>H4</h4>
+
+  <h5>H5</h5>
+
+  <h6>H6</h6>
+
+  <ul>
+    <li>List Item</li>
+    <li>List Item</li>
+    <li>List Item</li>
+  </ul>
+</BaseLayout>
