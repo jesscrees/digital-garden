@@ -1,4 +1,5 @@
 @use 'base';
+@use 'button';
 
 header {
   font-weight: 900;
@@ -39,18 +40,6 @@ footer {
         padding: 8px 12px;
         resize: vertical;
       }
-    }
-
-    button {
-      background: none;
-      border-radius: 20px;
-      border: 1px solid base.$primary-color;
-      color: base.$primary-color;
-      cursor: pointer;
-      font-weight: 900;
-      margin: 0 auto;
-      padding: 10px 20px;
-      width: auto;
     }
   }
 }

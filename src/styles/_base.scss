@@ -46,6 +46,17 @@
 }
 
 $primary-color: #ff5400;
+$box-shadow: 1px 15px 27px -17px rgba(0,0,0,0.4);
+$minimum-target-size: 44px;
+
+$max-page-width: 1200px;
+$max-content-width: 65ch;
+
+$spacing-xs: 2px;
+$spacing-sm: 4px;
+$spacing-md: 8px;
+$spacing-lg: 16px;
+$spacing-xl: 32px;
 
 *,
 *::before,
@@ -130,4 +141,10 @@ h6 {
   font-size: var(--caption-size);
   line-height: var(--caption-line-height);
   letter-spacing: var(--caption-letter-spacing);
+}
+
+.max-page-width {
+  margin: 0 auto;
+  max-width: $max-page-width;
+  padding: $spacing-sm $spacing-lg;
 }

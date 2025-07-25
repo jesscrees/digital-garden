@@ -20,36 +20,42 @@ const { frontmatter } = Astro.props;
     <title>{frontmatter.pageTitle}</title>
   </head>
   <body>
-    <header class="body-lg">🌱 Jess Crees</header>
+    <header class="body-lg">
+      <div class="max-page-width">🌱 Jess Crees</div>
+    </header>
 
-    <slot />
+    <div class="max-page-width">
+      <slot />
+    </div>
 
     <footer>
-      <h4>Get in Touch</h4>
+      <div class="max-page-width">
+        <h4>Get in Touch</h4>
 
-      <section>
-        <div class="input-with-label">
-          <label for="email">Email Address</label>
-          <input
-            id="email"
-            name="email"
-            placeholder="jane@smith.com"
-            type="email"
-          />
-        </div>
+        <section>
+          <div class="input-with-label">
+            <label for="email">Email Address</label>
+            <input
+              id="email"
+              name="email"
+              placeholder="jane@smith.com"
+              type="email"
+            />
+          </div>
 
-        <div class="input-with-label">
-          <label for="text">Your Message</label>
-          <textarea
-            cols="30"
-            id="text"
-            name="text"
-            placeholder="What's on your mind?"
-            rows="5"></textarea>
-        </div>
+          <div class="input-with-label">
+            <label for="text">Your Message</label>
+            <textarea
+              cols="30"
+              id="text"
+              name="text"
+              placeholder="What's on your mind?"
+              rows="5"></textarea>
+          </div>
 
-        <button>Send Message</button>
-      </section>
+          <button>Send Message</button>
+        </section>
+      </div>
     </footer>
 
     <script>

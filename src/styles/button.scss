@@ -1,0 +1,28 @@
+@use 'base';
+
+button {
+  -moz-box-shadow: base.$box-shadow;
+  -webkit-box-shadow: base.$box-shadow;
+  background: none;
+  border-radius: base.$spacing-xl;
+  border: 1px solid base.$primary-color;
+  box-shadow: base.$box-shadow;
+  color: base.$primary-color;
+  cursor: pointer;
+  font-weight: bolder;
+  margin: 0 auto;
+  min-height: base.$minimum-target-size;
+  min-width: base.$minimum-target-size;
+  padding: base.$spacing-md base.$spacing-xl;
+  transition: 0.2s all ease-in-out;
+
+  &:hover, &:focus {
+    background-color: base.$primary-color;
+    color: white;
+  }
+
+  &:active {
+    box-shadow: none;
+    transform: translateY(1px) scale(0.99);
+  }
+}
