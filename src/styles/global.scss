@@ -2,7 +2,7 @@
 @use 'button';
 
 header {
-  font-weight: 900;
+  font-weight: lighter;
   padding: 10px 0rem 40px;
 }
 
@@ -26,17 +26,19 @@ footer {
 
       label {
         font-size: 1rem;
-        font-weight: 900;
+        font-weight: lighter;
       }
 
       input {
         font-size: 1rem;
+        font-weight: lighter;
         padding: 8px 12px;
       }
 
       textarea {
         font-family: var(--font-family);
         font-size: 1rem;
+        font-weight: lighter;
         padding: 8px 12px;
         resize: vertical;
       }
