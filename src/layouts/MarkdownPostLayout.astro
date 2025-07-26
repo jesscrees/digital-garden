@@ -1,29 +1,24 @@
 ---
+import { Image } from "astro:assets";
 import BaseLayout from "./BaseLayout.astro";
 const { frontmatter } = Astro.props;
+console.log(frontmatter);
+console.log(frontmatter.title);
+
+const pageTitle = { frontmatter };
 ---
 
-<style>
-  a {
-    color: #00539f;
-  }
+<BaseLayout frontmatter={frontmatter}>
+  <Image
+    src={frontmatter.ogImage}
+    alt=""
+    layout="constrained"
+    width={400}
+    height={200}
+  />
+  <slot />
+</BaseLayout>
 
-  .tags {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .tag {
-    margin: 0.25em;
-    border: dotted 1px #a1a1a1;
-    border-radius: 0.5em;
-    padding: 0.5em 1em;
-    font-size: 1.15em;
-    background-color: #f8fcfd;
-  }
-</style>
-
-<!-- <BaseLayout frontmatter={frontmatter}> -->
 <!-- <p>{frontmatter.pubDate.toLocaleDateString()}</p>
 
   <p><em>{frontmatter.description}</em></p>
@@ -41,6 +36,3 @@ const { frontmatter } = Astro.props;
       ))
     }
   </div> -->
-
-<slot />
-<!-- </BaseLayout> -->
