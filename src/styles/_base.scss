@@ -66,6 +66,7 @@ $spacing-xl: 32px;
 
 /* Base styles */
 body {
+  font-family: 'Fredoka', sans-serif;
   font-size: 16px;
   transition: 0.2s all linear;
 
@@ -84,36 +85,42 @@ body {
 }
 
 h1 {
+  font-family: 'Sofia', sans-serif;
   font-size: var(--h1-size);
   line-height: var(--h1-line-height);
   letter-spacing: var(--h1-letter-spacing);
 }
 
 h2 {
+  font-family: 'Sofia', sans-serif;
   font-size: var(--h2-size);
   line-height: var(--h2-line-height);
   letter-spacing: var(--h2-letter-spacing);
 }
 
 h3 {
+  font-family: 'Sofia', sans-serif;
   font-size: var(--h3-size);
   line-height: var(--h3-line-height);
   letter-spacing: var(--h3-letter-spacing);
 }
 
 h4 {
+  font-family: 'Sofia', sans-serif;
   font-size: var(--h4-size);
   line-height: var(--h4-line-height);
   letter-spacing: var(--h4-letter-spacing);
 }
 
 h5 {
+  font-family: 'Sofia', sans-serif;
   font-size: var(--h5-size);
   line-height: var(--h5-line-height);
   letter-spacing: var(--h5-letter-spacing);
 }
 
 h6 {
+  font-family: 'Sofia', sans-serif;
   font-size: var(--h6-size);
   line-height: var(--h6-line-height);
   letter-spacing: var(--h6-letter-spacing);

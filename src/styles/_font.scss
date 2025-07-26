@@ -1,0 +1,16 @@
+/* Register your custom font family and tell the browser where to find it. */
+@font-face {
+  font-family: 'Sofia';
+  src: url('/fonts/Sofia-Regular') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Fredoka';
+  src: url('/fonts/Fredoka-VariableFont_wdth,wght') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
