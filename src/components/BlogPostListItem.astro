@@ -7,14 +7,14 @@ import { Image } from "astro:assets";
 <style>
   li {
     list-style-type: none;
-    width: 30%;
-    min-width: 300px;
+    flex: 1;
     background-color: white;
     border-radius: 10px;
     -moz-box-shadow: 1px 15px 27px -17px rgba(0, 0, 0, 0.4);
     -webkit-box-shadow: 1px 15px 27px -17px rgba(0, 0, 0, 0.4);
     box-shadow: 1px 15px 27px -17px rgba(0, 0, 0, 0.4);
     transition: 0.2s all ease-in-out;
+    min-width: 200px;
   }
   li:hover {
     transform: scale(1.02);
@@ -46,7 +46,7 @@ import { Image } from "astro:assets";
       src={ogImage}
       alt="A description of my image."
       layout="constrained"
-      width={300}
+      width={945}
       height={300}
     />
 
