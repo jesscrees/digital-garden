@@ -1,0 +1,60 @@
+---
+const { title, description, slug, draft, ogImage } = Astro.props;
+
+import { Image } from "astro:assets";
+---
+
+<style>
+  li {
+    list-style-type: none;
+    width: 30%;
+    min-width: 300px;
+    background-color: white;
+    border-radius: 10px;
+    -moz-box-shadow: 1px 15px 27px -17px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 1px 15px 27px -17px rgba(0, 0, 0, 0.4);
+    box-shadow: 1px 15px 27px -17px rgba(0, 0, 0, 0.4);
+    transition: 0.2s all ease-in-out;
+  }
+  li:hover {
+    transform: scale(1.02);
+    -moz-box-shadow: 1px 15px 27px -17px rgba(0, 0, 0, 0.6);
+    -webkit-box-shadow: 1px 15px 27px -17px rgba(0, 0, 0, 0.6);
+    box-shadow: 1px 15px 27px -17px rgba(0, 0, 0, 0.6);
+  }
+  li a {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+  }
+  h4 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .text {
+    padding: 0px 20px 30px;
+  }
+  .image {
+    border-radius: 10px 10px 0 0;
+  }
+</style>
+
+<li>
+  <a href={`blog/${slug}`}>
+    <Image
+      class="image"
+      src={ogImage}
+      alt="A description of my image."
+      layout="constrained"
+      width={300}
+      height={300}
+    />
+
+    <div class="text">
+      <h4>
+        {title}
+      </h4>
+      <p>{description}</p>
+    </div>
+  </a>
+</li>

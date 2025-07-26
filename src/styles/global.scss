@@ -3,22 +3,31 @@
 
 header {
   font-weight: lighter;
-  padding: 10px 0rem 40px;
+  padding: base.$spacing-md 0 base.$spacing-xl;
 }
 
 footer {
-  padding: 10px 0rem 40px;
+  background-color: #d2becc;
+  border-radius: base.$spacing-lg;
+  color: base.$primary-dark-color;
+  margin: base.$spacing-lg 0 base.$spacing-xl;
+  padding: base.$spacing-sm base.$spacing-lg base.$spacing-xl;
   width: 100%;
+
+  h4 {
+    margin-top: 1.4rem;
+    margin-bottom: 1.6rem;
+  }
 
   section {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: base.$spacing-xl;
 
     .input-with-label {
       display: flex;
       flex-direction: column;
-      gap: 5px;
+      gap: base.$spacing-sm;
 
       &:first-of-type {
         width: 50%;
@@ -30,17 +39,21 @@ footer {
       }
 
       input {
+        border: 1px solid transparent;
+        border-radius: base.$spacing-md;
         font-size: 1rem;
         font-weight: lighter;
-        padding: 8px 12px;
+        padding: base.$spacing-md base.$spacing-lg;
       }
 
       textarea {
+        border: 1px solid transparent;
+        border-radius: base.$spacing-md;
         font-family: var(--font-family);
         font-size: 1rem;
-        font-weight: lighter;
-        padding: 8px 12px;
+        padding: base.$spacing-md base.$spacing-lg;
         resize: vertical;
+        min-height: 4rem;
       }
     }
   }

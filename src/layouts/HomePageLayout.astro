@@ -1,6 +1,13 @@
 ---
+import { getCollection } from "astro:content";
 import "../styles/global.scss";
 import BaseLayout from "./BaseLayout.astro";
+import BlogPostListItem from "../components/BlogPostListItem.astro";
+
+import getPublishedPosts from "utils/getPublishedPosts";
+
+const allPosts = await getCollection("blog");
+const sortedPosts = getPublishedPosts(allPosts);
 
 export interface Props {
   frontmatter: {
@@ -14,6 +21,18 @@ export interface Props {
 const { frontmatter } = Astro.props;
 ---
 
+<style>
+  ul {
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+</style>
+
 <BaseLayout frontmatter={frontmatter}>
   <h1>{frontmatter.heading}</h1>
 
@@ -21,7 +40,16 @@ const { frontmatter } = Astro.props;
 
   <h2>{frontmatter.blogHeading}</h2>
 
-  <ul>
-    <li>Blog Post Card Here</li>
+  <ul style="margin-bottom: 6rem;">
+    {
+      sortedPosts.map((post: any) => (
+        <BlogPostListItem
+          description={post.data.description}
+          ogImage={post.data.ogImage}
+          title={post.data.title}
+          slug={post.data.slug}
+        />
+      ))
+    }
   </ul>
 </BaseLayout>

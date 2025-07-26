@@ -3,12 +3,13 @@
 button {
   -moz-box-shadow: base.$box-shadow;
   -webkit-box-shadow: base.$box-shadow;
-  background: none;
-  border-radius: base.$spacing-xl;
-  border: 1px solid base.$primary-color;
+  background-color: #f5edf2;
+  border-radius: base.$spacing-lg;
+  border: 1px solid #9d6e8e;
   box-shadow: base.$box-shadow;
-  color: base.$primary-color;
+  color: #9d6e8e;
   cursor: pointer;
+  font-family: 'Fredoka';
   font-weight: bolder;
   margin: 0 auto;
   min-height: base.$minimum-target-size;
@@ -17,7 +18,7 @@ button {
   transition: 0.2s all ease-in-out;
 
   &:hover, &:focus {
-    background-color: base.$primary-color;
+    background-color: #9d6e8e;
     color: white;
   }
 
