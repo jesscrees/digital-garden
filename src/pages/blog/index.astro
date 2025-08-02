@@ -1,0 +1,14 @@
+---
+import BaseLayout from "layouts/BaseLayout.astro";
+
+export interface Props {
+  frontmatter: {
+    pageTitle: string;
+  };
+}
+---
+
+<BaseLayout frontmatter={{ pageTitle: "Blog" }}>
+  <h1>Blog goes here</h1>
+  <slot />
+</BaseLayout>

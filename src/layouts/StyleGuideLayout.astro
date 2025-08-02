@@ -1,5 +1,5 @@
 ---
-import "../styles/global.scss";
+import Button from "components/Button.astro";
 import BaseLayout from "./BaseLayout.astro";
 
 export interface Props {
@@ -12,6 +12,15 @@ const { frontmatter } = Astro.props;
 ---
 
 <BaseLayout frontmatter={frontmatter}>
+  <Button href="/"> Example Button with href </Button>
+
+  <br />
+  <br />
+
+  <Button onClick={() => console.log("clicked")}>
+    Example Button with onClick
+  </Button>
+
   <h1>H1</h1>
 
   <h2>H2</h2>

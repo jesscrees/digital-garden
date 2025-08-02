@@ -1,7 +1,8 @@
 ---
+import Link from "components/Link.astro";
 import "../styles/global.scss";
 
-export interface Props {
+interface Props {
   frontmatter: {
     pageTitle: string;
   };
@@ -10,6 +11,7 @@ export interface Props {
 const { frontmatter } = Astro.props;
 ---
 
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -20,8 +22,17 @@ const { frontmatter } = Astro.props;
     <title>{frontmatter.pageTitle}</title>
   </head>
   <body>
-    <header class="body-lg">
-      <div class="max-page-width">🌱 Jess Crees</div>
+    <header
+      class="body-lg max-page-width"
+      style="display: flex; gap: 20px; justify-content: space-between;"
+    >
+      <div>🌱 Jess Crees</div>
+
+      <nav style="display: flex; gap: 10px;">
+        <Link href="/">Home</Link>
+        <Link href="/blog">Blog</Link>
+        <Link href="/">Random Blog Post</Link>
+      </nav>
     </header>
 
     <div class="max-page-width">

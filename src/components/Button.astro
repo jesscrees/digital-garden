@@ -1,0 +1,62 @@
+---
+const { href, onClick } = Astro.props;
+---
+
+{
+  href && (
+    <a href={href}>
+      <slot />
+    </a>
+  )
+}
+
+{
+  !href && onClick && (
+    <button>
+      <slot />
+    </button>
+  )
+}
+
+<style>
+  a,
+  button {
+    -moz-box-shadow: 1px 15px 27px -17px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 1px 15px 27px -17px rgba(0, 0, 0, 0.4);
+    align-items: center;
+    background-color: green;
+    border-radius: 15px;
+    border: none;
+    box-shadow: 1px 15px 27px -17px rgba(0, 0, 0, 0.4);
+    color: white;
+    display: inline-flex;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+    min-height: 44px;
+    min-width: 44px;
+    padding: 10px 20px;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 150ms all ease-in-out;
+  }
+
+  a:hover,
+  button:hover,
+  a:focus,
+  button:focus {
+    -moz-box-shadow: 1px 15px 27px -17px rgba(0, 0, 0, 0.6);
+    -webkit-box-shadow: 1px 15px 27px -17px rgba(0, 0, 0, 0.6);
+    background-color: darkgreen;
+    box-shadow: 1px 15px 27px -17px rgba(0, 0, 0, 0.6);
+  }
+
+  a:active,
+  button:active {
+    -moz-box-shadow: 1px 15px 27px -17px rgba(0, 0, 0, 0.6);
+    -webkit-box-shadow: 1px 15px 27px -17px rgba(0, 0, 0, 0.6);
+    background-color: darkgreen;
+    box-shadow: 1px 15px 27px -17px rgba(0, 0, 0, 0.6);
+    transform: scale(0.98);
+  }
+</style>
