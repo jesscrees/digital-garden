@@ -1,10 +1,12 @@
 ---
-const { href, onClick } = Astro.props;
+const { href, onClick, onDarkBG = false } = Astro.props;
+
+// TODO: use onDarkBG to set a class that will allow the button/link to show on dark backgrounds
 ---
 
 {
   href && (
-    <a href={href}>
+    <a class="button-link" href={href}>
       <slot />
     </a>
   )
@@ -19,7 +21,7 @@ const { href, onClick } = Astro.props;
 }
 
 <style>
-  a,
+  a.button-link,
   button {
     -moz-box-shadow: 1px 15px 27px -17px rgba(0, 0, 0, 0.4);
     -webkit-box-shadow: 1px 15px 27px -17px rgba(0, 0, 0, 0.4);
@@ -41,9 +43,9 @@ const { href, onClick } = Astro.props;
     transition: 150ms all ease-in-out;
   }
 
-  a:hover,
+  a.button-link:hover,
   button:hover,
-  a:focus,
+  a.button-link:focus,
   button:focus {
     -moz-box-shadow: 1px 15px 27px -17px rgba(0, 0, 0, 0.6);
     -webkit-box-shadow: 1px 15px 27px -17px rgba(0, 0, 0, 0.6);
@@ -51,7 +53,7 @@ const { href, onClick } = Astro.props;
     box-shadow: 1px 15px 27px -17px rgba(0, 0, 0, 0.6);
   }
 
-  a:active,
+  a.button-link:active,
   button:active {
     -moz-box-shadow: 1px 15px 27px -17px rgba(0, 0, 0, 0.6);
     -webkit-box-shadow: 1px 15px 27px -17px rgba(0, 0, 0, 0.6);

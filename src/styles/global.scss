@@ -7,9 +7,9 @@ header {
 }
 
 footer {
-  background-color: #d2becc;
+  background-color: base.$secondary-dark-color;
   border-radius: base.$spacing-lg;
-  color: base.$primary-dark-color;
+  color: white;
   margin: base.$spacing-lg 0 base.$spacing-xl;
   padding: base.$spacing-sm base.$spacing-lg base.$spacing-xl;
   width: 100%;
